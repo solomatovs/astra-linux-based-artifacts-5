@@ -1,0 +1,13 @@
+TAG                      IMAGE_ID       SIZE       CREATED
+dmp/rust:1.90.0          15998d8ce552   1.43GB     2026-07-09 10:31:51 +0300 MSK
+dmp/rust:1.90.0-dist     b3dfc7edc931   1.43GB     2026-07-09 10:31:46 +0300 MSK
+dmp/rust:1.91.0          79109e595705   837MB      2026-07-28 14:31:34 +0300 MSK
+dmp/rust:1.91.0-dist     13aa51724c18   837MB      2026-07-28 14:31:32 +0300 MSK
+dmp/rust:1.92.0          6037abd947b3   837MB      2026-07-28 15:34:39 +0300 MSK
+dmp/rust:1.92.0-dist     a4d26d7f9246   837MB      2026-07-28 14:54:37 +0300 MSK
+dmp/rust:1.93.0-dist     b33b4ebf082b   835MB      2026-07-28 15:08:09 +0300 MSK
+dmp/rust:1.93.0          f57ef065e7dd   835MB      2026-07-28 15:34:43 +0300 MSK
+dmp/rust:1.94.0          73b7d581ec8b   836MB      2026-07-28 15:34:46 +0300 MSK
+dmp/rust:1.94.0-dist     7da33556b12f   836MB      2026-07-28 15:21:19 +0300 MSK
+dmp/rust:1.95.0          87f45fc77178   837MB      2026-07-28 15:34:49 +0300 MSK
+dmp/rust:1.95.0-dist     47f2048231b0   837MB      2026-07-28 15:34:35 +0300 MSK
