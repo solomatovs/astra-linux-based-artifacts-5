@@ -1,2 +1,3 @@
 parts/* binary -delta -text
 *.zst binary -delta -text
+*.part-* binary -delta -text
