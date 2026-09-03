@@ -72,15 +72,14 @@ GitHub не принимает файлы больше 100 МБ, поэтому 
 лежит кусками рядом с исходным путём:
 
 ```
-src/onnx-genai/qwen3-0.6b-int4/model.onnx.data.part-000 ... part-008    9 кусков,  376 МБ
-src/onnx-genai/qwen3-1.7b-int4/model.onnx.data.part-000 ... part-023   24 куска, 1047 МБ
-src/onnx-genai/qwen3-4b-int4/model.onnx.data.part-000 ... part-054     55 кусков, 2434 МБ
-SHA256SUMS.src-parts                                   контрольные суммы кусков
-SHA256SUMS.src-files                                   контрольные суммы собранных файлов
-src-restore.sh                                         склейка с проверкой сумм
+src/nodejs.20.18.1.tar.gz.part-000 ... part-006     7 кусков, 315 МБ
+src/nodejs.22.22.1.tar.gz.part-000 ... part-007     8 кусков, 354 МБ
+SHA256SUMS.src-parts                                контрольные суммы кусков
+SHA256SUMS.src-files                                контрольные суммы собранных файлов
+src-restore.sh                                      склейка с проверкой сумм
 ```
 
-Собранные `model.onnx.data` перечислены в `.gitignore` — в репозитории живут только куски.
+Собранные файлы перечислены в `.gitignore` — в репозитории живут только куски.
 
 ```bash
 ./src-restore.sh            # проверить куски, склеить, проверить результат
@@ -91,12 +90,9 @@ src-restore.sh                                         склейка с про�
 
 ```bash
 sha256sum -c SHA256SUMS.src-parts
-cat src/onnx-genai/qwen3-4b-int4/model.onnx.data.part-* > src/onnx-genai/qwen3-4b-int4/model.onnx.data
+cat src/nodejs.22.22.1.tar.gz.part-* > src/nodejs.22.22.1.tar.gz
 sha256sum -c SHA256SUMS.src-files
 ```
-
-Файлы `gitattributes.huggingface` — исходные `.gitattributes` из huggingface-репозиториев
-моделей. Они переименованы: их правила `filter=lfs` ломают коммит в репозитории без git-lfs.
 
 ## Оговорка
 
