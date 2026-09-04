@@ -68,15 +68,15 @@ docker run --rm dmp/rust:1.95.0 rustc --version
 
 ## Каталог `src` — разрезанные файлы
 
-GitHub не принимает файлы больше 100 МБ, поэтому всё, что в `src` тяжелее 45 МБ,
+GitHub не принимает файлы больше 100 МБ, поэтому всё, что в `src` тяжелее 80 МБ,
 лежит кусками рядом с исходным путём:
 
 ```
-src/nodejs.20.18.1.tar.gz.part-000 ... part-006     7 кусков, 315 МБ
-src/nodejs.22.22.1.tar.gz.part-000 ... part-007     8 кусков, 354 МБ
-SHA256SUMS.src-parts                                контрольные суммы кусков
-SHA256SUMS.src-files                                контрольные суммы собранных файлов
-src-restore.sh                                      склейка с проверкой сумм
+src/chainlit-2.11.1.tar.gz                                   3.8 МБ, целиком
+src/chainlit-ui-store-2.11.1.tar.gz.part-000 ... part-002    3 куска, 200 МБ
+SHA256SUMS.src-parts                                         контрольные суммы кусков
+SHA256SUMS.src-files                                         контрольные суммы собранных файлов
+src-restore.sh                                               склейка с проверкой сумм
 ```
 
 Собранные файлы перечислены в `.gitignore` — в репозитории живут только куски.
@@ -90,7 +90,7 @@ src-restore.sh                                      склейка с прове
 
 ```bash
 sha256sum -c SHA256SUMS.src-parts
-cat src/nodejs.22.22.1.tar.gz.part-* > src/nodejs.22.22.1.tar.gz
+cat src/chainlit-ui-store-2.11.1.tar.gz.part-* > src/chainlit-ui-store-2.11.1.tar.gz
 sha256sum -c SHA256SUMS.src-files
 ```
 
